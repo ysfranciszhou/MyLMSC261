@@ -1,0 +1,48 @@
+For this assignment, I chose for loop to count from 1 to 100.
+first: for i in range(101):
+    print(f"{i}")
+Put if in for loop:
+for i in range(101):
+      if i % 3:
+          print("Fizz")
+          if i % 5:
+              print("Buzz")
+              if i % 15:
+                  print("FizzBuzz")
+      else:
+          print(f"{i}")
+The output only shows numbers that can be divided by 3, which is wrong.
+So I give i a range: i % 3 == 0, i % 5 == 0 and both at the same time:
+for i in range(0, 101):
+        if (i % 3 == 0):
+            print("Fizz")
+            if (i % 5 == 0):
+                print("Buzz")
+                if (i % 3 == 0 and i % 5 == 0):
+                  print("Fizzbuzz")
+        else:
+            print(f"{i}")
+The "Fizz" and "FizzBuzz" can print correctly. It seems that the laptop can't
+recognize "Buzz".
+I put space in front of the second if:
+for i in range(0, 101):
+        if (i % 3 == 0):
+            print("Fizz")
+        if (i % 5 == 0):
+            print("Buzz")
+            if (i % 3 == 0 and i % 5 == 0):
+                print("Fizzbuzz")
+        else:
+            print(f"{i}")
+Now it works, except it put the words right before the numbers.
+I realized that 0 can be divided by 3&5, so I changed the range of the numbers:
+for i in range(1, 101):
+        if (i % 3 == 0):
+            print("Fizz")
+        if (i % 5 == 0):
+            print("Buzz")
+            if (i % 3 == 0 and i % 5 == 0):
+                print("Fizzbuzz")
+        else:
+            print(f"{i}")
+Now it works.
